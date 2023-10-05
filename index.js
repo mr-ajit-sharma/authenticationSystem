@@ -11,6 +11,7 @@ app.set('views','./views')
 app.set(expressEjsLayouts);
 app.set('layout','./views/main')
 
+app.use(express.static('assets'))
 app.use(bodyParser.json())//here we are forwarding the data in the json formate
 app.use('/',require('./server/routers/index'))
 
